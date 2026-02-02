@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Love Stories | Netflix</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="profile-screen" class="screen">
+        <h1>Who's watching?</h1>
+        <div class="profile-container">
+            <div class="profile-card" onclick="entrySequence('Her Name')">
+                <div class="avatar"><img src="assets/photos/her-avatar.jpg" alt="Her"></div>
+                <p>My Valentine</p>
+            </div>
+        </div>
+    </div>
+
+    <main id="main-content" class="hidden">
+        <nav class="navbar">
+            <h1 class="logo">OUR LOVE STORIES</h1>
+            <div class="nav-links">
+                <span>Home</span>
+                <span>Memories</span>
+                <span>New & Popular</span>
+            </div>
+        </nav>
+
+        <header class="hero">
+            <div class="hero-content">
+                <h2 id="featured-title">The First Date</h2>
+                <p id="featured-desc">The day everything changed. I knew from the moment I saw you that this would be my favorite story.</p>
+                <div class="hero-buttons">
+                    <button class="play-btn">▶ Play</button>
+                    <button class="info-btn">ⓘ More Info</button>
+                </div>
+            </div>
+        </header>
+
+        <section class="rows-container">
+            <div class="row">
+                <h3>Our Best Moments 💕</h3>
+                <div class="row-posters" id="moments-row">
+                    </div>
+            </div>
+            <div class="row">
+                <h3>Trips & Adventures 🌍</h3>
+                <div class="row-posters" id="trips-row"></div>
+            </div>
+        </section>
+    </main>
+
+    <div id="modal" class="modal hidden" onclick="closeModal()">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <div id="modal-media-container"></div>
+            <div class="modal-info">
+                <h2 id="modal-title"></h2>
+                <p id="modal-date" style="color: #46d369; font-weight: bold;"></p>
+                <p id="modal-desc"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
